@@ -41,7 +41,7 @@ class PassGeneratorServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->bind('passgenerator', function ($app) {
-            return new PassGenerator($app);
+            return new PassGenerator();
         });
 
         $this->commands($this->commands);
